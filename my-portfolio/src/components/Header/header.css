@@ -21,32 +21,34 @@ ul {
   display: flex;
 }
 .scrolling {
-  background-color:#003961;
+  background-color: #1f80e0;
   transition: all 400ms ease;
  
 }
 
-.scrollingText{
- color: white;
-}
 
-ul li  {
+
+ul li {
   list-style: none;
   margin: 1rem;
-  color: #000;
   text-transform: uppercase;
+
 }
 
-ul li:hover{
+ul li a:hover{
   border-bottom: 1px solid #1f80e0;
   cursor: pointer;
 }
 
-
 ul li a {
   text-decoration: none;
   text-transform: uppercase;
+  color: #000000;
 }
+
+.scrollingText {
+  color: rgba(240, 240, 240, 0.986);
+ }
 
 .changer {
   display: flex;
@@ -84,7 +86,7 @@ ul li a {
       align-items: center;
       position: fixed;
       inset: 0;
-      background:  rgb(14, 47, 109);
+      background:  #3970a8;;
       
   }
 

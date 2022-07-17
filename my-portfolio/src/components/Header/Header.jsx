@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import './header.css'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 
 
 const Header = ({isCrolling}) => {
@@ -15,16 +15,18 @@ const Header = ({isCrolling}) => {
          </div>
          <nav className={`${active ? 'navbar active' : 'navbar'}`}>
            <ul>
-                <li className={`${isCrolling > 20 ? 'scrollingText' : ""}`}>
-                 Inicio
+                <li >
+                 <a href="#inicio">Inicio</a>
                 </li>
-                <li className={`${isCrolling > 20 ? 'scrollingText' : ""}`}>
-                  <Link to='/sobremi'>Sobre mi</Link>
+                <li>
+                  <a  href="#sobremi">Sobre mi</a>
                 </li>
-                <li className={`${isCrolling > 20 ? 'scrollingText' : ""}`}>
-                  <Link to='/main'>Main</Link>
+                <li >
+                  <a href='#proyectos'>Proyectos</a>
                 </li>
-                <li className={`${isCrolling > 20 ? 'scrollingText' : ""}`}>Contacto</li>
+                <li >
+                  <a href="#contacto">Contacto</a>
+                </li>
             </ul>
           </nav>
          <div className={`nav-toggle ${active ?  "open": null}`} onClick={() => setActive(!active)}>
