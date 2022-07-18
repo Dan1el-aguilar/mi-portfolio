@@ -8,6 +8,10 @@ const Header = ({isCrolling}) => {
   
   const [active, setActive] = useState(false)
 
+  const toTheTop = () => {
+    window.scrollTo( { top:0, left:0, behavior:"smooth"} )
+    setActive(!active)
+  }
   return (
     <div className={`header ${isCrolling > 20 ? 'scrolling' : ""}`}>
         <div className="header_logo">
@@ -16,16 +20,16 @@ const Header = ({isCrolling}) => {
          <nav className={`${active ? 'navbar active' : 'navbar'}`}>
            <ul>
                 <li >
-                 <a href="#inicio">Inicio</a>
+                 <a href="#inicio" onClick={toTheTop}>Inicio</a>
                 </li>
                 <li>
-                  <a  href="#sobremi">Sobre mi</a>
+                  <a  href="#sobremi" onClick={() => setActive(!active)}>Sobre mi</a>
                 </li>
                 <li >
-                  <a href='#proyectos'>Proyectos</a>
+                  <a href='#proyectos' onClick={() => setActive(!active)}>Proyectos</a>
                 </li>
                 <li >
-                  <a href="#contacto">Contacto</a>
+                  <a href="#contacto" onClick={() => setActive(!active)}>Contacto</a>
                 </li>
             </ul>
           </nav>
